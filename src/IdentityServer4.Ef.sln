@@ -1,10 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.572
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer4", "IdentityServer4\src\IdentityServer4.csproj", "{E786CA5A-28BF-4A36-AD87-C00BDF27516A}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer4.Storage", "Storage\src\IdentityServer4.Storage.csproj", "{88E70F4C-C643-40C8-9192-4794D5FFD9D5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer4.EntityFramework.Storage", "EntityFramework.Storage\src\IdentityServer4.EntityFramework.Storage.csproj", "{96A8A647-33D5-483F-ABB7-E3C4B592A783}"
@@ -13,16 +11,18 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer4.EntityFrame
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Host", "EntityFramework\host\Host.csproj", "{0ADDFE02-076F-4814-94D5-717DCC2EEA66}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer4.Local", "IdentityServer4\src\IdentityServer4.Local.csproj", "{A9058F70-9FE8-4C86-A4D1-77D9E9ED9C1D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer4.Common.Local", "IdentityServer4 .Common\src\IdentityServer4.Common.Local.csproj", "{E58939E0-5F32-4298-AAB4-DC9593C1EB13}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer4.Configuration.Oidc.Local", "IdentityServer4 .Configuration.Oidc\src\IdentityServer4.Configuration.Oidc.Local.csproj", "{4B933586-3B15-498A-97FF-08171AD6A1FC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E786CA5A-28BF-4A36-AD87-C00BDF27516A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E786CA5A-28BF-4A36-AD87-C00BDF27516A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E786CA5A-28BF-4A36-AD87-C00BDF27516A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E786CA5A-28BF-4A36-AD87-C00BDF27516A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{88E70F4C-C643-40C8-9192-4794D5FFD9D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{88E70F4C-C643-40C8-9192-4794D5FFD9D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88E70F4C-C643-40C8-9192-4794D5FFD9D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +39,18 @@ Global
 		{0ADDFE02-076F-4814-94D5-717DCC2EEA66}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0ADDFE02-076F-4814-94D5-717DCC2EEA66}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0ADDFE02-076F-4814-94D5-717DCC2EEA66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9058F70-9FE8-4C86-A4D1-77D9E9ED9C1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9058F70-9FE8-4C86-A4D1-77D9E9ED9C1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9058F70-9FE8-4C86-A4D1-77D9E9ED9C1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9058F70-9FE8-4C86-A4D1-77D9E9ED9C1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E58939E0-5F32-4298-AAB4-DC9593C1EB13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E58939E0-5F32-4298-AAB4-DC9593C1EB13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E58939E0-5F32-4298-AAB4-DC9593C1EB13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E58939E0-5F32-4298-AAB4-DC9593C1EB13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B933586-3B15-498A-97FF-08171AD6A1FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B933586-3B15-498A-97FF-08171AD6A1FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B933586-3B15-498A-97FF-08171AD6A1FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B933586-3B15-498A-97FF-08171AD6A1FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
