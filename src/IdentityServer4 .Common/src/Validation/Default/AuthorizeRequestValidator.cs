@@ -11,11 +11,8 @@ using IdentityServer4.Stores;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Specialized;
-using System.Diagnostics.Eventing.Reader;
-using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
-using System.Security.Cryptography;
 using System.Threading.Tasks;
 using IdentityServer4.Logging.Models;
 

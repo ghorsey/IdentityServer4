@@ -44,6 +44,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Storage\src\IdentityServer4.Storage.csproj" />
+    <ProjectReference Include="..\..\IdentityServer4 .Common\src\IdentityServer4.Common.Local.csproj" />
+    <ProjectReference Include="..\..\IdentityServer4 .Configuration.Oidc\src\IdentityServer4.Configuration.Oidc.Local.csproj" />
   </ItemGroup>
 </Project>
