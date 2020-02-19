@@ -14,7 +14,7 @@ namespace IdentityServer4.Validation
     /// <summary>
     /// Validates scopes
     /// </summary>
-    public class ScopeValidator
+    public class ScopeValidator : IScopeValidator
     {
         private readonly ILogger _logger;
         private readonly IResourceStore _store;
@@ -77,7 +77,7 @@ namespace IdentityServer4.Validation
         /// <returns></returns>
         public bool ValidateRequiredScopes(IEnumerable<string> consentedScopes)
         {
-            var identity = RequestedResources.IdentityResources.Where(x => x.Required).Select(x=>x.Name);
+            var identity = RequestedResources.IdentityResources.Where(x => x.Required).Select(x => x.Name);
             var apiQuery = from api in RequestedResources.ApiResources
                            where api.Scopes != null
                            from scope in api.Scopes

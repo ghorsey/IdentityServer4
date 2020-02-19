@@ -2,17 +2,17 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
-
-    <PackageId>IdentityServer4.Storage</PackageId>
-    <Description>Storage interfaces and models for IdentityServer4</Description>
-    <Authors>Brock Allen;Dominick Baier</Authors>
-
-    <PackageTags>OAuth2;OAuth 2.0;OpenID Connect;Security;Identity;IdentityServer</PackageTags>
+    <PackageId>IdentityServer4.Validation</PackageId>
+    <Description>Validation library</Description>
+    <Authors>Brock Allen;Dominick Baier;Scott Brady</Authors>
+    <AssemblyName>IdentityServer4.Validation</AssemblyName>
+    <PackageTags>OAuth2;OAuth 2.0;OpenID Connect;Security;Identity;IdentityServer;EntityFramework</PackageTags>
     <PackageIcon>icon.jpg</PackageIcon>
     <PackageProjectUrl>https://github.com/IdentityServer/IdentityServer4</PackageProjectUrl>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PackageReleaseNotes>https://github.com/IdentityServer/IdentityServer4/releases</PackageReleaseNotes>
-
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
@@ -20,17 +20,19 @@
     <AssemblyOriginatorKeyFile>../../../key.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>
     <PublicSign Condition="'$(OS)' != 'Windows_NT'">true</PublicSign>
-
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="../../../icon.jpg" Pack="true" Visible="false" PackagePath="" />
+    <PackageReference Update="MinVer" Version="2.1.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="IdentityModel" />
-    <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" />
+    <Folder Include="Properties\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\IdentityServer4.Models\IdentityServer4.Models\IdentityServer4.Models.csproj" />
+    <ProjectReference Include="..\..\Storage\src\IdentityServer4.Storage.csproj" />
   </ItemGroup>
 
 </Project>
