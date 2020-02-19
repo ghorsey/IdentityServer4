@@ -18,71 +18,71 @@ namespace Microsoft.Extensions.DependencyInjection
     /// </summary>
     public static class IdentityServerBuilderExtensionsAdditional
     {
-        /// <summary>
-        /// Adds the extension grant validator.
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="builder">The builder.</param>
-        /// <returns></returns>
-        public static IIdentityServerBuilder AddExtensionGrantValidator<T>(this IIdentityServerBuilder builder)
-            where T : class, IExtensionGrantValidator
-        {
-            builder.Services.AddTransient<IExtensionGrantValidator, T>();
+        /////// <summary>
+        /////// Adds the extension grant validator.
+        /////// </summary>
+        /////// <typeparam name="T"></typeparam>
+        /////// <param name="builder">The builder.</param>
+        /////// <returns></returns>
+        ////public static IIdentityServerBuilder AddExtensionGrantValidator<T>(this IIdentityServerBuilder builder)
+        ////    where T : class, IExtensionGrantValidator
+        ////{
+        ////    builder.Services.AddTransient<IExtensionGrantValidator, T>();
 
-            return builder;
-        }
+        ////    return builder;
+        ////}
 
-        /// <summary>
-        /// Adds a redirect URI validator.
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="builder">The builder.</param>
-        /// <returns></returns>
-        public static IIdentityServerBuilder AddRedirectUriValidator<T>(this IIdentityServerBuilder builder)
-            where T : class, IRedirectUriValidator
-        {
-            builder.Services.AddTransient<IRedirectUriValidator, T>();
+        /////// <summary>
+        /////// Adds a redirect URI validator.
+        /////// </summary>
+        /////// <typeparam name="T"></typeparam>
+        /////// <param name="builder">The builder.</param>
+        /////// <returns></returns>
+        ////public static IIdentityServerBuilder AddRedirectUriValidator<T>(this IIdentityServerBuilder builder)
+        ////    where T : class, IRedirectUriValidator
+        ////{
+        ////    builder.Services.AddTransient<IRedirectUriValidator, T>();
 
-            return builder;
-        }
+        ////    return builder;
+        ////}
 
-        /// <summary>
-        /// Adds a an "AppAuth" (OAuth 2.0 for Native Apps) compliant redirect URI validator (does strict validation but also allows http://127.0.0.1 with random port)
-        /// </summary>
-        /// <param name="builder">The builder.</param>
-        /// <returns></returns>
-        public static IIdentityServerBuilder AddAppAuthRedirectUriValidator(this IIdentityServerBuilder builder)
-        {
-            return builder.AddRedirectUriValidator<StrictRedirectUriValidatorAppAuth>();
-        }
+        /////// <summary>
+        /////// Adds a an "AppAuth" (OAuth 2.0 for Native Apps) compliant redirect URI validator (does strict validation but also allows http://127.0.0.1 with random port)
+        /////// </summary>
+        /////// <param name="builder">The builder.</param>
+        /////// <returns></returns>
+        ////public static IIdentityServerBuilder AddAppAuthRedirectUriValidator(this IIdentityServerBuilder builder)
+        ////{
+        ////    return builder.AddRedirectUriValidator<StrictRedirectUriValidatorAppAuth>();
+        ////}
 
-        /// <summary>
-        /// Adds the resource owner validator.
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="builder">The builder.</param>
-        /// <returns></returns>
-        public static IIdentityServerBuilder AddResourceOwnerValidator<T>(this IIdentityServerBuilder builder)
-           where T : class, IResourceOwnerPasswordValidator
-        {
-            builder.Services.AddTransient<IResourceOwnerPasswordValidator, T>();
+        /////// <summary>
+        /////// Adds the resource owner validator.
+        /////// </summary>
+        /////// <typeparam name="T"></typeparam>
+        /////// <param name="builder">The builder.</param>
+        /////// <returns></returns>
+        ////public static IIdentityServerBuilder AddResourceOwnerValidator<T>(this IIdentityServerBuilder builder)
+        ////   where T : class, IResourceOwnerPasswordValidator
+        ////{
+        ////    builder.Services.AddTransient<IResourceOwnerPasswordValidator, T>();
 
-            return builder;
-        }
+        ////    return builder;
+        ////}
 
-        /// <summary>
-        /// Adds the profile service.
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="builder">The builder.</param>
-        /// <returns></returns>
-        public static IIdentityServerBuilder AddProfileService<T>(this IIdentityServerBuilder builder)
-           where T : class, IProfileService
-        {
-            builder.Services.AddTransient<IProfileService, T>();
+        /////// <summary>
+        /////// Adds the profile service.
+        /////// </summary>
+        /////// <typeparam name="T"></typeparam>
+        /////// <param name="builder">The builder.</param>
+        /////// <returns></returns>
+        ////public static IIdentityServerBuilder AddProfileService<T>(this IIdentityServerBuilder builder)
+        ////   where T : class, IProfileService
+        ////{
+        ////    builder.Services.AddTransient<IProfileService, T>();
 
-            return builder;
-        }
+        ////    return builder;
+        ////}
 
         /// <summary>
         /// Adds a client store.
@@ -167,33 +167,33 @@ namespace Microsoft.Extensions.DependencyInjection
             return builder;
         }
 
-        /// <summary>
-        /// Adds the secret parser.
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="builder">The builder.</param>
-        /// <returns></returns>
-        public static IIdentityServerBuilder AddSecretParser<T>(this IIdentityServerBuilder builder)
-            where T : class, ISecretParser
-        {
-            builder.Services.AddTransient<ISecretParser, T>();
+        /////// <summary>
+        /////// Adds the secret parser.
+        /////// </summary>
+        /////// <typeparam name="T"></typeparam>
+        /////// <param name="builder">The builder.</param>
+        /////// <returns></returns>
+        ////public static IIdentityServerBuilder AddSecretParser<T>(this IIdentityServerBuilder builder)
+        ////    where T : class, ISecretParser
+        ////{
+        ////    builder.Services.AddTransient<ISecretParser, T>();
 
-            return builder;
-        }
+        ////    return builder;
+        ////}
 
-        /// <summary>
-        /// Adds the secret validator.
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="builder">The builder.</param>
-        /// <returns></returns>
-        public static IIdentityServerBuilder AddSecretValidator<T>(this IIdentityServerBuilder builder)
-            where T : class, ISecretValidator
-        {
-            builder.Services.AddTransient<ISecretValidator, T>();
+        /////// <summary>
+        /////// Adds the secret validator.
+        /////// </summary>
+        /////// <typeparam name="T"></typeparam>
+        /////// <param name="builder">The builder.</param>
+        /////// <returns></returns>
+        ////public static IIdentityServerBuilder AddSecretValidator<T>(this IIdentityServerBuilder builder)
+        ////    where T : class, ISecretValidator
+        ////{
+        ////    builder.Services.AddTransient<ISecretValidator, T>();
 
-            return builder;
-        }
+        ////    return builder;
+        ////}
 
         /// <summary>
         /// Adds the client store cache.
@@ -225,182 +225,182 @@ namespace Microsoft.Extensions.DependencyInjection
             return builder;
         }
 
-        /// <summary>
-        /// Adds the authorize interaction response generator.
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="builder">The builder.</param>
-        /// <returns></returns>
-        public static IIdentityServerBuilder AddAuthorizeInteractionResponseGenerator<T>(this IIdentityServerBuilder builder)
-            where T : class, IAuthorizeInteractionResponseGenerator
-        {
-            builder.Services.AddTransient<IAuthorizeInteractionResponseGenerator, T>();
+        /////// <summary>
+        /////// Adds the authorize interaction response generator.
+        /////// </summary>
+        /////// <typeparam name="T"></typeparam>
+        /////// <param name="builder">The builder.</param>
+        /////// <returns></returns>
+        ////public static IIdentityServerBuilder AddAuthorizeInteractionResponseGenerator<T>(this IIdentityServerBuilder builder)
+        ////    where T : class, IAuthorizeInteractionResponseGenerator
+        ////{
+        ////    builder.Services.AddTransient<IAuthorizeInteractionResponseGenerator, T>();
 
-            return builder;
-        }
+        ////    return builder;
+        ////}
 
-        /// <summary>
-        /// Adds the custom authorize request validator.
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="builder">The builder.</param>
-        /// <returns></returns>
-        public static IIdentityServerBuilder AddCustomAuthorizeRequestValidator<T>(this IIdentityServerBuilder builder)
-           where T : class, ICustomAuthorizeRequestValidator
-        {
-            builder.Services.AddTransient<ICustomAuthorizeRequestValidator, T>();
+        /////// <summary>
+        /////// Adds the custom authorize request validator.
+        /////// </summary>
+        /////// <typeparam name="T"></typeparam>
+        /////// <param name="builder">The builder.</param>
+        /////// <returns></returns>
+        ////public static IIdentityServerBuilder AddCustomAuthorizeRequestValidator<T>(this IIdentityServerBuilder builder)
+        ////   where T : class, ICustomAuthorizeRequestValidator
+        ////{
+        ////    builder.Services.AddTransient<ICustomAuthorizeRequestValidator, T>();
 
-            return builder;
-        }
+        ////    return builder;
+        ////}
 
-        /// <summary>
-        /// Adds the custom authorize request validator.
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="builder">The builder.</param>
-        /// <returns></returns>
-        public static IIdentityServerBuilder AddCustomTokenRequestValidator<T>(this IIdentityServerBuilder builder)
-           where T : class, ICustomTokenRequestValidator
-        {
-            builder.Services.AddTransient<ICustomTokenRequestValidator, T>();
+        /////// <summary>
+        /////// Adds the custom authorize request validator.
+        /////// </summary>
+        /////// <typeparam name="T"></typeparam>
+        /////// <param name="builder">The builder.</param>
+        /////// <returns></returns>
+        ////public static IIdentityServerBuilder AddCustomTokenRequestValidator<T>(this IIdentityServerBuilder builder)
+        ////   where T : class, ICustomTokenRequestValidator
+        ////{
+        ////    builder.Services.AddTransient<ICustomTokenRequestValidator, T>();
 
-            return builder;
-        }
+        ////    return builder;
+        ////}
 
-        /// <summary>
-        /// Adds support for client authentication using JWT bearer assertions.
-        /// </summary>
-        /// <param name="builder">The builder.</param>
-        /// <returns></returns>
-        public static IIdentityServerBuilder AddJwtBearerClientAuthentication(this IIdentityServerBuilder builder)
-        {
-            builder.AddSecretParser<JwtBearerClientAssertionSecretParser>();
-            builder.AddSecretValidator<PrivateKeyJwtSecretValidator>();
+        /////// <summary>
+        /////// Adds support for client authentication using JWT bearer assertions.
+        /////// </summary>
+        /////// <param name="builder">The builder.</param>
+        /////// <returns></returns>
+        ////public static IIdentityServerBuilder AddJwtBearerClientAuthentication(this IIdentityServerBuilder builder)
+        ////{
+        ////    builder.AddSecretParser<JwtBearerClientAssertionSecretParser>();
+        ////    builder.AddSecretValidator<PrivateKeyJwtSecretValidator>();
 
-            return builder;
-        }
+        ////    return builder;
+        ////}
 
-        /// <summary>
-        /// Adds a client configuration validator.
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="builder">The builder.</param>
-        /// <returns></returns>
-        public static IIdentityServerBuilder AddClientConfigurationValidator<T>(this IIdentityServerBuilder builder)
-            where T : class, IClientConfigurationValidator
-        {
-            builder.Services.AddTransient<IClientConfigurationValidator, T>();
+        /////// <summary>
+        /////// Adds a client configuration validator.
+        /////// </summary>
+        /////// <typeparam name="T"></typeparam>
+        /////// <param name="builder">The builder.</param>
+        /////// <returns></returns>
+        ////public static IIdentityServerBuilder AddClientConfigurationValidator<T>(this IIdentityServerBuilder builder)
+        ////    where T : class, IClientConfigurationValidator
+        ////{
+        ////    builder.Services.AddTransient<IClientConfigurationValidator, T>();
 
-            return builder;
-        }
+        ////    return builder;
+        ////}
 
-        /// <summary>
-        /// Adds the X509 secret validators for mutual TLS.
-        /// </summary>
-        /// <param name="builder">The builder.</param>
-        /// <returns></returns>
-        public static IIdentityServerBuilder AddMutualTlsSecretValidators(this IIdentityServerBuilder builder)
-        {
-            builder.AddSecretParser<MutualTlsSecretParser>();
-            builder.AddSecretValidator<X509ThumbprintSecretValidator>();
-            builder.AddSecretValidator<X509NameSecretValidator>();
+        /////// <summary>
+        /////// Adds the X509 secret validators for mutual TLS.
+        /////// </summary>
+        /////// <param name="builder">The builder.</param>
+        /////// <returns></returns>
+        ////public static IIdentityServerBuilder AddMutualTlsSecretValidators(this IIdentityServerBuilder builder)
+        ////{
+        ////    builder.AddSecretParser<MutualTlsSecretParser>();
+        ////    builder.AddSecretValidator<X509ThumbprintSecretValidator>();
+        ////    builder.AddSecretValidator<X509NameSecretValidator>();
 
-            return builder;
-        }
+        ////    return builder;
+        ////}
 
-        /// <summary>
-        /// Adds a custom back-channel logout service.
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="builder">The builder.</param>
-        /// <returns></returns>
-        public static IIdentityServerBuilder AddBackChannelLogoutService<T>(this IIdentityServerBuilder builder)
-            where T : class, IBackChannelLogoutService
-        {
-            builder.Services.AddTransient<IBackChannelLogoutService, T>();
+        /////// <summary>
+        /////// Adds a custom back-channel logout service.
+        /////// </summary>
+        /////// <typeparam name="T"></typeparam>
+        /////// <param name="builder">The builder.</param>
+        /////// <returns></returns>
+        ////public static IIdentityServerBuilder AddBackChannelLogoutService<T>(this IIdentityServerBuilder builder)
+        ////    where T : class, IBackChannelLogoutService
+        ////{
+        ////    builder.Services.AddTransient<IBackChannelLogoutService, T>();
 
-            return builder;
-        }
+        ////    return builder;
+        ////}
 
-        // todo: check with later previews of ASP.NET Core if this is still required
-        /// <summary>
-        /// Adds configuration for the HttpClient used for back-channel logout notifications.
-        /// </summary>
-        /// <param name="builder">The builder.</param>
-        /// <param name="configureClient">The configruation callback.</param>
-        /// <returns></returns>
-        public static IHttpClientBuilder AddBackChannelLogoutHttpClient(this IIdentityServerBuilder builder, Action<HttpClient> configureClient = null)
-        {
-            var name = typeof(BackChannelLogoutHttpClient).Name;
-            IHttpClientBuilder httpBuilder;
+        ////// todo: check with later previews of ASP.NET Core if this is still required
+        /////// <summary>
+        /////// Adds configuration for the HttpClient used for back-channel logout notifications.
+        /////// </summary>
+        /////// <param name="builder">The builder.</param>
+        /////// <param name="configureClient">The configruation callback.</param>
+        /////// <returns></returns>
+        ////public static IHttpClientBuilder AddBackChannelLogoutHttpClient(this IIdentityServerBuilder builder, Action<HttpClient> configureClient = null)
+        ////{
+        ////    var name = typeof(BackChannelLogoutHttpClient).Name;
+        ////    IHttpClientBuilder httpBuilder;
 
-            if (configureClient != null)
-            {
-                httpBuilder = builder.Services.AddHttpClient(name, configureClient);
-            }
-            else
-            {
-                httpBuilder = builder.Services.AddHttpClient(name);
-            }
+        ////    if (configureClient != null)
+        ////    {
+        ////        httpBuilder = builder.Services.AddHttpClient(name, configureClient);
+        ////    }
+        ////    else
+        ////    {
+        ////        httpBuilder = builder.Services.AddHttpClient(name);
+        ////    }
 
-            httpBuilder.Services.AddTransient<BackChannelLogoutHttpClient>(s =>
-            {
-                var httpClientFactory = s.GetRequiredService<IHttpClientFactory>();
-                var httpClient = httpClientFactory.CreateClient(name);
+        ////    httpBuilder.Services.AddTransient<BackChannelLogoutHttpClient>(s =>
+        ////    {
+        ////        var httpClientFactory = s.GetRequiredService<IHttpClientFactory>();
+        ////        var httpClient = httpClientFactory.CreateClient(name);
 
-                var typedClientFactory = s.GetRequiredService<ITypedHttpClientFactory<BackChannelLogoutHttpClient>>();
-                return typedClientFactory.CreateClient(httpClient);
-            });
+        ////        var typedClientFactory = s.GetRequiredService<ITypedHttpClientFactory<BackChannelLogoutHttpClient>>();
+        ////        return typedClientFactory.CreateClient(httpClient);
+        ////    });
 
-            return httpBuilder;
-        }
+        ////    return httpBuilder;
+        ////}
 
 
-        // todo: check with later previews of ASP.NET Core if this is still required
-        /// <summary>
-        /// Adds configuration for the HttpClient used for JWT request_uri requests.
-        /// </summary>
-        /// <param name="builder">The builder.</param>
-        /// <param name="configureClient">The configruation callback.</param>
-        /// <returns></returns>
-        public static IHttpClientBuilder AddJwtRequestUriHttpClient(this IIdentityServerBuilder builder, Action<HttpClient> configureClient = null)
-        {
-            var name = typeof(JwtRequestUriHttpClient).Name;
-            IHttpClientBuilder httpBuilder;
+        ////// todo: check with later previews of ASP.NET Core if this is still required
+        /////// <summary>
+        /////// Adds configuration for the HttpClient used for JWT request_uri requests.
+        /////// </summary>
+        /////// <param name="builder">The builder.</param>
+        /////// <param name="configureClient">The configruation callback.</param>
+        /////// <returns></returns>
+        ////public static IHttpClientBuilder AddJwtRequestUriHttpClient(this IIdentityServerBuilder builder, Action<HttpClient> configureClient = null)
+        ////{
+        ////    var name = typeof(JwtRequestUriHttpClient).Name;
+        ////    IHttpClientBuilder httpBuilder;
 
-            if (configureClient != null)
-            {
-                httpBuilder = builder.Services.AddHttpClient(name, configureClient);
-            }
-            else
-            {
-                httpBuilder = builder.Services.AddHttpClient(name);
-            }
+        ////    if (configureClient != null)
+        ////    {
+        ////        httpBuilder = builder.Services.AddHttpClient(name, configureClient);
+        ////    }
+        ////    else
+        ////    {
+        ////        httpBuilder = builder.Services.AddHttpClient(name);
+        ////    }
 
-            httpBuilder.Services.AddTransient<JwtRequestUriHttpClient>(s =>
-            {
-                var httpClientFactory = s.GetRequiredService<IHttpClientFactory>();
-                var httpClient = httpClientFactory.CreateClient(name);
+        ////    httpBuilder.Services.AddTransient<JwtRequestUriHttpClient>(s =>
+        ////    {
+        ////        var httpClientFactory = s.GetRequiredService<IHttpClientFactory>();
+        ////        var httpClient = httpClientFactory.CreateClient(name);
 
-                var typedClientFactory = s.GetRequiredService<ITypedHttpClientFactory<JwtRequestUriHttpClient>>();
-                return typedClientFactory.CreateClient(httpClient);
-            });
+        ////        var typedClientFactory = s.GetRequiredService<ITypedHttpClientFactory<JwtRequestUriHttpClient>>();
+        ////        return typedClientFactory.CreateClient(httpClient);
+        ////    });
 
-            return httpBuilder;
-        }
+        ////    return httpBuilder;
+        ////}
 
-        /// <summary>
-        /// Adds a custom authorization request parameter store.
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="builder">The builder.</param>
-        /// <returns></returns>
-        public static IIdentityServerBuilder AddAuthorizationParametersMessageStore<T>(this IIdentityServerBuilder builder)
-            where T : class, IAuthorizationParametersMessageStore
-        {
-            builder.Services.AddTransient<IAuthorizationParametersMessageStore, T>();
+        /////// <summary>
+        /////// Adds a custom authorization request parameter store.
+        /////// </summary>
+        /////// <typeparam name="T"></typeparam>
+        /////// <param name="builder">The builder.</param>
+        /////// <returns></returns>
+        ////public static IIdentityServerBuilder AddAuthorizationParametersMessageStore<T>(this IIdentityServerBuilder builder)
+        ////    where T : class, IAuthorizationParametersMessageStore
+        ////{
+        ////    builder.Services.AddTransient<IAuthorizationParametersMessageStore, T>();
 
-            return builder;
-        }
+        ////    return builder;
+        ////}
     }
 }

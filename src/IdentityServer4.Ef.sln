@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer4.Common.Loca
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer4.EntityFramework.Local", "EntityFramework\src\IdentityServer4.EntityFramework.Local.csproj", "{D5E497E3-AEC3-4E83-B2FF-472F164C8CA3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer4.Local", "IdentityServer4\src\IdentityServer4.Local.csproj", "{BB5E0FBB-8395-4AF5-8D79-2D53B15C2C86}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer4.Local", "IdentityServer4\src\IdentityServer4.Local.csproj", "{F9E05526-C90F-4BEB-ACE3-D46EEF861160}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,10 +41,10 @@ Global
 		{D5E497E3-AEC3-4E83-B2FF-472F164C8CA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5E497E3-AEC3-4E83-B2FF-472F164C8CA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5E497E3-AEC3-4E83-B2FF-472F164C8CA3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BB5E0FBB-8395-4AF5-8D79-2D53B15C2C86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BB5E0FBB-8395-4AF5-8D79-2D53B15C2C86}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BB5E0FBB-8395-4AF5-8D79-2D53B15C2C86}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BB5E0FBB-8395-4AF5-8D79-2D53B15C2C86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9E05526-C90F-4BEB-ACE3-D46EEF861160}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9E05526-C90F-4BEB-ACE3-D46EEF861160}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9E05526-C90F-4BEB-ACE3-D46EEF861160}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9E05526-C90F-4BEB-ACE3-D46EEF861160}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -3,7 +3,6 @@
 
 
 using IdentityServer4.Extensions;
-using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,6 +33,6 @@ namespace IdentityServer4.Configuration
         /// <value>
         /// The cors paths.
         /// </value>
-        public ICollection<PathString> CorsPaths { get; set; } = Constants.ProtocolRoutePaths.CorsPaths.Select(x => new PathString(x.EnsureLeadingSlash())).ToList();
+        public ICollection<string> CorsPaths { get; set; } = Constants.ProtocolRoutePaths.CorsPaths.Select(x => x.EnsureLeadingSlash()).ToList();
     }
 }
